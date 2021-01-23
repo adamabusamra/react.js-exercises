@@ -1,0 +1,46 @@
+p {
+  font-size: 1rem;
+}
+.card {
+  width: 15rem;
+  height: 23rem;
+  position: relative;
+  border-radius: 7%;
+  overflow: hidden;
+}
+.card-img-top {
+  height: 8rem;
+}
+.user-img {
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  left: 4.5rem;
+  top: 20%;
+}
+.card-title {
+  margin-bottom: 0;
+}
+.light-text {
+  color: #777;
+
+  /* font-size: 0.85rem; */
+}
+.card i {
+  color: #777;
+  font-size: 1.7rem;
+}
+.card i:hover {
+  color: #010174;
+}
+.card i.remove {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.7rem;
+  color: rgba(165, 43, 43, 0.89);
+}
+.card i.remove:hover {
+  color: red;
+  cursor: pointer;
+}
