@@ -2,21 +2,23 @@ p {
   font-size: 1rem;
 }
 .card {
-  width: 15rem;
-  height: 23rem;
+  max-width: 260px;
+  max-height: 25rem;
   position: relative;
   border-radius: 7%;
   overflow: hidden;
 }
 .card-img-top {
-  height: 8rem;
+  min-height: 8rem;
+  max-height: 8rem;
 }
 .user-img {
   height: 6rem;
   width: 6rem;
-  position: absolute;
+  margin-top: -50px;
+  /* position: absolute;
   left: 4.5rem;
-  top: 20%;
+  top: 20%; */
 }
 .card-title {
   margin-bottom: 0;
