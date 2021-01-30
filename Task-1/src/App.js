@@ -29,6 +29,7 @@ class App extends Component {
         linkedin: "https://www.linkedin.com/in/adam-abusamra/",
         github: "https://github.com/adamabusamra",
         facebook: "https://www.facebook.com/JordanCivilDefense",
+        remove: false,
       },
       {
         id: 5,
@@ -41,6 +42,7 @@ class App extends Component {
         linkedin: "https://www.linkedin.com/in/firas-diab/",
         github: "https://github.com/adamabusamra",
         facebook: "https://www.facebook.com/JordanCivilDefense",
+        remove: true,
       },
       {
         id: 4,
@@ -52,6 +54,7 @@ class App extends Component {
         linkedin: "https://www.linkedin.com/in/laithalenooz/",
         github: "https://github.com/adamabusamra",
         facebook: "https://www.facebook.com/JordanCivilDefense",
+        remove: false,
       },
       {
         id: 3,
@@ -64,6 +67,7 @@ class App extends Component {
         linkedin: "https://www.linkedin.com/in/mohammadyacoub/",
         github: "https://github.com/moh-yacoub",
         facebook: "https://www.facebook.com/JordanCivilDefense",
+        remove: false,
       },
     ],
     show: false,
@@ -102,6 +106,11 @@ class App extends Component {
     // });
     const newStudents = [...this.state.students];
     newStudents[index].name = event.target.value;
+    this.setState({ students: newStudents });
+  };
+  firas = (index) => {
+    const newStudents = [...this.state.students];
+    newStudents[index].userImage = "../images/sabah.png";
     this.setState({ students: newStudents });
   };
 
@@ -162,6 +171,14 @@ class App extends Component {
                   value={student.name}
                   onChange={(e) => this.updateStudents(e, index)}
                 />
+                {student.remove ? (
+                  <button
+                    onClick={() => this.firas(index)}
+                    className="btn btn-danger btn-sm mt-1"
+                  >
+                    Remove Firas
+                  </button>
+                ) : null}
               </Card>
             );
           })}
